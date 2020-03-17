@@ -7,7 +7,16 @@
 <body>
 
 <h1>Downloadable archives</h1>
-<a class='linkText' href='files/rushnote.tar.gz'>rushnote.tar.gz</a><br>
-<a class='linkText' href='files/raspberry-pi-smart-home.tar.gz'>raspberry-pi-smart-home.tar.gz</a><br>
+<?php
+
+$fileList = glob('files/*');
+foreach($fileList as $filename){
+    //Use the is_file function to make sure that it is not a directory.
+    if(is_file($filename)){
+        echo "<a class='linkText' href='$filename'>$filename</a><br>";
+    }
+}
+?>
+
 </body>
-</html> 
+</html>
