@@ -6,17 +6,22 @@
 </head>
 <body>
 
-<h1>Downloadable archives</h1>
-<?php
+<!--<?php
 
 $fileList = glob('files/*');
 foreach($fileList as $filename){
     //Use the is_file function to make sure that it is not a directory.
     if(is_file($filename)){
-        echo "<a class='linkText' href='$filename'>$filename</a><br>";
+		 echo "<a class='linkText' href='$filename'>$filename</a><br>";
+				 
     }
 }
-?>
-
+?>-->
+<div id=xibs>
+	<h1>Downloadable archives</h1>
+	<button class='fileXib'><h4 href='filename'>filename</h4></button><br>
+	<button class='fileXib'><h4 href='filename'>filename</h4></button><br>
+	<button class='fileXib'><h4 href='filename'>filename</h4></button><br>
+</div>
 </body>
 </html>
